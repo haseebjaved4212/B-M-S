@@ -4,7 +4,7 @@ Welcome to the **Bank Management System (BMS)**! This is a lightweight, command-
 
 ---
 
-## ✨ Features
+##  Features
 
 - **Account Creation**: Sign up with your details to receive a unique 6-digit Account Number.
 - **Secure Authentication**: PIN and Account Number verification required for all sensitive actions.
