@@ -1,15 +1,18 @@
-
+import json 
+import random
+import string
+from pathlib import Path
 
 class Bank :
     def Createaccount(self):
         pass
-    
 
 
 
 
 
-user = Bank()
+
+user = Bank() 
 
 
 
