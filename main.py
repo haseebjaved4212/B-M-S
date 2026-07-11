@@ -6,12 +6,28 @@ from pathlib import Path
 class Bank :
     database = 'data.json'
     data = []
+    
+    try:
+        if Path(database).exists():
+            with open(database) as fs: 
+                data = json.load(fs.read()) 
+        else: 
+            print("No Such File Exists ")
 
-    with open(database) as fs: 
-        data = json.load(fs.read()) 
 
+    except Exception as err:
+        print("an exception accured as {err}") 
+     
     def Createaccount(self):
-        pass
+      data = {
+        "name": input("Enter Your Full Name : "),
+        "age": int(input("Enter Your Age : ")),
+        "email": input("Enter Your Email Address : "),
+        "pin": int(input("Enter Your Pin : ")),
+        "accountNo." : 1234,
+        "balance" : 0
+        
+      }
 
 
 
