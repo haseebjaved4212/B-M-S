@@ -4,22 +4,30 @@ import string
 from pathlib import Path
 
 class Bank :
-    database = 'data.json'
-    data = []
+    database = 'info.json'
+    info = []
     
     try:
         if Path(database).exists():
             with open(database) as fs: 
-                data = json.load(fs.read()) 
+                info = json.load(fs) 
         else: 
             print("No Such File Exists ")
 
 
     except Exception as err:
         print("an exception accured as {err}") 
-     
+    
+    @staticmethod
+    def update(): 
+
+        with open(Bank.database, 'w') as fs: 
+            json.dump(Bank.info, fs)
+
+
+
     def Createaccount(self):
-      data = {
+      info = {
         "name": input("Enter Your Full Name : "),
         "age": int(input("Enter Your Age : ")),
         "email": input("Enter Your Email Address : "),
@@ -28,6 +36,20 @@ class Bank :
         "balance" : 0
         
       }
+      if info["age"] < 18 or len(str(info["pin"])) != 4 : 
+        print("Sorry You Are Not Elgible for Creating a Bank Account ")
+      else: 
+        Bank.info.append(info)
+        print("Account Created Successfully")
+        print(f"Name : {info['name']}")
+        print(f"Age : {info['age']}")
+        print(f"Email : {info['email']}")
+        print(f"Pin : {info['pin']}")
+        print(f"Account Number : {info['accountNo.']}")
+        print(f"Balance : {info['balance']}")
+        
+        print("Please NoteDown Your Details Somewhere Safe")
+        Bank.update()
 
 
 
