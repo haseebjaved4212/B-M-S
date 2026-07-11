@@ -4,6 +4,12 @@ import string
 from pathlib import Path
 
 class Bank :
+    database = 'data.json'
+    data = []
+
+    with open(database) as fs: 
+        data = json.load(fs.read()) 
+
     def Createaccount(self):
         pass
 
