@@ -1,3 +1,21 @@
+
+
+class Bank :
+    def Createaccount(self):
+        pass
+    
+
+
+
+
+
+user = Bank()
+
+
+
+
+
+
 print("Press 1 for Creating an Account")
 print("Press 2 for Depositing Money in the Bank Account")
 print("Press 3 for Withdrawing Money from Bank Account")
@@ -9,6 +27,8 @@ check = int(input("Enter your choice: "))
 
 if check == 1:
     print("Creating Account")
+    user.Createaccount()
+
 elif check == 2:
     print("Depositing Money")
 elif check == 3:
