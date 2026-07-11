@@ -1,0 +1,6 @@
+Steps:-
+1. create a bank account 
+2. add money to the bank account
+3. create a fixed deposit
+4. check maturity date
+5. withdraw amount on maturity date 
